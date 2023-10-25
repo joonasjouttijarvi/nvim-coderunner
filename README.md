@@ -5,7 +5,7 @@ A Neovim plugin to seamlessly run code from within the editor.
 #### Currently supports
 
 - Python
-- Java (with optionas for javac and maven)
+- Java (with options for javac and maven)
 - Javascript
 - Typescript
 

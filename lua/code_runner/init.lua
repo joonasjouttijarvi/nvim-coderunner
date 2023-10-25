@@ -6,7 +6,7 @@ M.run_code = function()
 
     if file_extension == "py" then
         cmd = "python3 " .. filename
-    elseif file_extension == "js" or file_extension == "jsx" or file_extension then
+    elseif file_extension == "js" or file_extension == "jsx" then
         cmd = "node " .. filename
     elseif file_extension == "java" then
         local options = {

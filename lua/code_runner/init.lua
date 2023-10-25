@@ -1,3 +1,5 @@
+local M = {}
+
 M.run_code = function()
     local file_extension = vim.fn.expand('%:e') -- Get file extension
 
@@ -11,4 +13,3 @@ M.run_code = function()
 end
 
 return M
-

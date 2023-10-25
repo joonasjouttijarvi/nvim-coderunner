@@ -1,5 +1,3 @@
 {
-    "diagnostics.globals": [
-        "M"
-    ]
+    "workspace.checkThirdParty": false
 }

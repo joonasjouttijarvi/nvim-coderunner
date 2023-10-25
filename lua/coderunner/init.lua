@@ -1,12 +1,22 @@
 local M = {}
 
+local js_extensions = { "js", "jsx", "ts", "tsx" }
+
 M.run_code = function()
     local file_extension = vim.fn.expand('%:e') -- Get file extension
+    local cmd = ""
 
     if file_extension == "py" then
-        require('coderunner.python').run()
+        cmd = require('coderunner.python').get_command()
     elseif file_extension == "java" then
-        require('coderunner.java').run()
+        cmd = require('coderunner.java').get_command()
+    elseif file_extension == js_extensions then
+        cmd = require('coderunner.node').get_command()
+    end
+
+    if cmd ~= "" then
+        -- Open terminal in a split and run the command
+        vim.cmd(":belowright split | resize 15 | terminal " .. cmd)
     else
         print("No runner configured for this file extension.")
     end

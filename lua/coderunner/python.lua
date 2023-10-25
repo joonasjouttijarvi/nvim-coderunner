@@ -1,11 +1,8 @@
 local M = {}
 
-M.run = function()
+M.get_command = function()
     local file_path = vim.fn.expand('%:p')
-    local cmd = string.format("python3 %s", file_path)
-
-    -- Open terminal in a split and run the Python file
-    vim.cmd(":belowright split | resize 15 | terminal " .. cmd)
+    return string.format("python3 %s", file_path)
 end
 
 return M

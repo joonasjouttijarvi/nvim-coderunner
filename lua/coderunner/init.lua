@@ -1,6 +1,6 @@
 local M = {}
 
-local js_extensions = { "js", "jsx", "ts", "tsx" }
+local js_extensions = { "js" }
 
 M.run_code = function()
     local file_extension = vim.fn.expand('%:e') -- Get file extension

@@ -7,13 +7,13 @@ M.run_code = function()
 	local cmd = ""
 
 	if file_extension == "py" then
-		cmd = require("coderunner.python").get_command()
+		cmd = require("coderunner.python_runner").get_command()
 	elseif file_extension == "java" then
-		cmd = require("coderunner.java").get_command()
+		cmd = require("coderunner.java_runner").get_command()
 	elseif file_extension == js_extensions then
-		cmd = require("coderunner.node").get_command()
+		cmd = require("coderunner.node_runner").get_command()
 	elseif file_extension == "cpp" then
-		cmd = require("coderunner.cpp").get_command()
+		cmd = require("coderunner.cpp_runner").get_command()
 	end
 
 	if cmd ~= "" then
